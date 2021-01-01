@@ -21,7 +21,7 @@ const wsLink = new WebSocketLink({
   },
 });
 const httpLink = createHttpLink({
-  uri: 'https://react-socialmeds-server.herokuapp.com/',
+  uri: 'http://react-socialmeds-server.herokuapp.com/',
 });
 
 const link = split(
