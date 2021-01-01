@@ -15,13 +15,13 @@ import {
 import { setContext } from 'apollo-link-context';
 
 const wsLink = new WebSocketLink({
-  uri: `ws://react-socialmeds-server.herokuapp.com/graphql`,
+  uri: `wss://react-socialmeds-server.herokuapp.com/graphql`,
   options: {
     reconnect: true,
   },
 });
 const httpLink = createHttpLink({
-  uri: 'http://react-socialmeds-server.herokuapp.com/',
+  uri: 'https://react-socialmeds-server.herokuapp.com/',
 });
 
 const link = split(
