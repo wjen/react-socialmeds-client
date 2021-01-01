@@ -95,7 +95,6 @@ function SinglePost(props) {
                     </Label>
                   </Button>
                 </MyPopup>
-                {!user && <Link to="/login">Login to comment...</Link>}
                 {user && user.username === username && (
                   <EditModal postId={id} body={body} username={username} />
                 )}
@@ -104,6 +103,7 @@ function SinglePost(props) {
                 )}
               </Card.Content>
             </Card>
+            {!user && <Link to="/login">Login to comment...</Link>}
             {user && (
               <Card fluid>
                 <Card.Content>
